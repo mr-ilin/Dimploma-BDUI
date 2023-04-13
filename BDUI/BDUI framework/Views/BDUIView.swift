@@ -48,7 +48,6 @@ class BDUIView: UIView, BDUIViewConfigurable {
                 bottom: paddings.bottom,
                 right: paddings.right
             ))
-            insetsConstraints?.activate()
         }
     }
 
