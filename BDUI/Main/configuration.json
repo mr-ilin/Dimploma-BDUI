@@ -1,0 +1,46 @@
+{
+  "mainScreenId": "mainScreen",
+  "screens": [
+    {
+      "id": "mainScreen",
+      "rootElement":
+      {
+        "type": "container",
+        "layout":
+        {
+          "paddings":
+          {
+            "top": 50,
+            "left": 50,
+            "right": 50,
+            "bottom": 50
+          }
+        },
+        "appereance":
+        {
+          "backgroundColor": "#868780ff"
+        },
+        "elements": [
+          {
+            "type": "label",
+            "appereance":
+            {
+              "backgroundColor": "#ffffffff"
+            },
+            "content":
+            {
+              "text": "Hello world!"
+            }
+          },
+          {
+            "type": "spacer",
+            "appereance":
+            {
+              "backgroundColor": "#fca503ff"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
