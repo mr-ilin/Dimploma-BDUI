@@ -33,6 +33,10 @@
                 "bottom": 16
               }
             },
+            "border": {
+              "width": 2.0,
+              "cornerRadius": 8.0
+            },
             "appereance":
             {
               "backgroundColor": "#ffffffff"
@@ -45,11 +49,7 @@
             }
           },
           {
-            "type": "spacer",
-            "appereance":
-            {
-              "backgroundColor": "#fca503ff"
-            }
+            "type": "spacer"
           }
         ]
       }
