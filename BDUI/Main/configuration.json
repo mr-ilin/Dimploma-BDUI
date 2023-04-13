@@ -23,13 +23,25 @@
         "elements": [
           {
             "type": "label",
+            "layout":
+            {
+              "paddings":
+              {
+                "top": 16,
+                "left": 16,
+                "right": 16,
+                "bottom": 16
+              }
+            },
             "appereance":
             {
               "backgroundColor": "#ffffffff"
             },
             "content":
             {
-              "text": "Hello world!"
+              "text": "Hello world!",
+              "textAlignment": "right",
+              "fontStyle": "largeTitle"
             }
           },
           {

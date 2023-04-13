@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F61646E529E5CF6800567A5B /* UIColor+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61646E429E5CF6800567A5B /* UIColor+extensions.swift */; };
+		F63A34D929E86CBF001F0A6D /* BDUIFontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A34D829E86CBF001F0A6D /* BDUIFontStyle.swift */; };
+		F63A34DB29E86E2A001F0A6D /* BDUITextAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A34DA29E86E2A001F0A6D /* BDUITextAlignment.swift */; };
 		F6894D8C29E5D0C5006D7A0D /* BDUILabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6894D8B29E5D0C5006D7A0D /* BDUILabelView.swift */; };
 		F6894D8E29E5D7E7006D7A0D /* BDUIContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6894D8D29E5D7E7006D7A0D /* BDUIContainerView.swift */; };
 		F6894D9229E703CA006D7A0D /* configuration.json in Resources */ = {isa = PBXBuildFile; fileRef = F6894D9129E703CA006D7A0D /* configuration.json */; };
@@ -41,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		F61646E429E5CF6800567A5B /* UIColor+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extensions.swift"; sourceTree = "<group>"; };
+		F63A34D829E86CBF001F0A6D /* BDUIFontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUIFontStyle.swift; sourceTree = "<group>"; };
+		F63A34DA29E86E2A001F0A6D /* BDUITextAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUITextAlignment.swift; sourceTree = "<group>"; };
 		F6894D8B29E5D0C5006D7A0D /* BDUILabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUILabelView.swift; sourceTree = "<group>"; };
 		F6894D8D29E5D7E7006D7A0D /* BDUIContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUIContainerView.swift; sourceTree = "<group>"; };
 		F6894D9129E703CA006D7A0D /* configuration.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = configuration.json; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				F6894D9D29E708EC006D7A0D /* BDUIBorder.swift */,
 				F6894DA029E70927006D7A0D /* BDUIAppereance.swift */,
 				F6894DA229E70937006D7A0D /* BDUIComponentContent.swift */,
+				F63A34D829E86CBF001F0A6D /* BDUIFontStyle.swift */,
+				F63A34DA29E86E2A001F0A6D /* BDUITextAlignment.swift */,
 			);
 			path = "Component models";
 			sourceTree = "<group>";
@@ -265,6 +271,7 @@
 			files = (
 				F6894D9A29E708BC006D7A0D /* BDUIAlignmentType.swift in Sources */,
 				F6894D9C29E708D3006D7A0D /* BDUILayout.swift in Sources */,
+				F63A34DB29E86E2A001F0A6D /* BDUITextAlignment.swift in Sources */,
 				F6894DA529E7287F006D7A0D /* BDUISpacerView.swift in Sources */,
 				F6D2334429DF36050077E16D /* BDUIComponentType.swift in Sources */,
 				F6D2333C29DF31FD0077E16D /* BDUIParser.swift in Sources */,
@@ -273,6 +280,7 @@
 				F6D2333E29DF32580077E16D /* BDUIConfiguration.swift in Sources */,
 				F6894DA129E70927006D7A0D /* BDUIAppereance.swift in Sources */,
 				F6D2334229DF35D70077E16D /* BDUIComponentModel.swift in Sources */,
+				F63A34D929E86CBF001F0A6D /* BDUIFontStyle.swift in Sources */,
 				F6894DA329E70937006D7A0D /* BDUIComponentContent.swift in Sources */,
 				F6D2333429DF2A830077E16D /* AppCoordinator.swift in Sources */,
 				F6894D9629E7088D006D7A0D /* BDUIAxisType.swift in Sources */,

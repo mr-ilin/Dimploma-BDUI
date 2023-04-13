@@ -38,5 +38,14 @@ final class BDUILabelView: BDUIView {
     private func setupLabel(with content: BDUIComponentContent?) {
         labelView.text = content?.text
         labelView.numberOfLines = content?.numberOfLines ?? 0
+
+        if let textAlignment = content?.textAlignment {
+            labelView.textAlignment = textAlignment.uikitAlignment
+        }
+
+        if let textStyle = content?.fontStyle {
+            labelView.font = .preferredFont(forTextStyle: textStyle.uikitFont)
+        }
+
     }
 }
