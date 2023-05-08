@@ -25,7 +25,7 @@ final class BDUIContainerView: BDUIView {
 
     private func configureView() {
         innerView.addSubview(stackView)
-        stackView.edgesToSuperview()
+		stackView.edgesToSuperview(usingSafeArea: true)
     }
 
     // MARK: Setup

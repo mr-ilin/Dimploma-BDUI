@@ -25,7 +25,7 @@ final class BDUILabelView: BDUIView {
 
     private func configureView() {
         innerView.addSubview(labelView)
-        labelView.edgesToSuperview()
+        labelView.edgesToSuperview(usingSafeArea: true)
     }
 
     // MARK: Setup

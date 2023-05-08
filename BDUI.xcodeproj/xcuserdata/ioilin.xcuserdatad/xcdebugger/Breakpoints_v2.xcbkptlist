@@ -53,7 +53,7 @@
             <Locations>
                <Location
                   uuid = "B522909C-9AE3-4A98-92C5-1B2ADCDA1BE3 - a7ceda65e7e00229"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "BDUI.AppCoordinator.handleURL(Foundation.URL) -&gt; Swift.Bool"
@@ -68,7 +68,7 @@
                </Location>
                <Location
                   uuid = "B522909C-9AE3-4A98-92C5-1B2ADCDA1BE3 - 567d11dd2da9731"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (BDUI.CoordinatorProtocol) -&gt; Swift.Bool in BDUI.AppCoordinator.handleURL(Foundation.URL) -&gt; Swift.Bool"
@@ -103,24 +103,8 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1674F960-F0AD-4D7C-A5C1-2B43B94B4216"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BDUI/BDUI framework/Views/BDUIView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "handleTap(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "B59136FC-90E5-468A-B114-4E667E2BD58A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BDUI/BDUI framework/BDUIViewFactory.swift"
@@ -136,7 +120,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "DF5487DC-5CC4-4423-9B23-413F8DC56D4D"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BDUI/Project/BDUIUniversal/BDUICoordinator.swift"
