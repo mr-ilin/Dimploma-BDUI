@@ -35,9 +35,10 @@ public final class BDUIViewFactoryImpl {
 
 			case .spacer:
 				return BDUISpacerView()
-
 			case .label:
 				return BDUILabelView()
+			case .button:
+				return BDUIButtonView()
 			}
 		}()
 

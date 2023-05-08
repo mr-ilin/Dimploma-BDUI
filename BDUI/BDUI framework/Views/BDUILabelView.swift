@@ -46,6 +46,5 @@ final class BDUILabelView: BDUIView {
         if let textStyle = content?.fontStyle {
             labelView.font = .preferredFont(forTextStyle: textStyle.uikitFont)
         }
-
     }
 }

@@ -11,7 +11,13 @@ import TinyConstraints
 class BDUIView: UIView, BDUIViewConfigurable {
     // MARK: Properties
     private var viewModel: BDUIComponentModel?
-	var tapAction: (() -> Void)?
+
+	var tapAction: (() -> Void)? {
+		didSet {
+			let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
+			addGestureRecognizer(tap)
+		}
+	}
 
     // MARK: Views
     let innerView = UIView()
@@ -23,9 +29,6 @@ class BDUIView: UIView, BDUIViewConfigurable {
 
         addSubview(innerView)
         insetsConstraints = innerView.edgesToSuperview()
-
-		let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
-		addGestureRecognizer(tap)
     }
 
     @available(*, unavailable)

@@ -11,4 +11,5 @@ public enum BDUIComponentType: String, Decodable {
     case container
     case spacer
     case label
+	case button
 }
