@@ -15,6 +15,7 @@ public struct BDUIComponentModel: Decodable, Equatable {
     public let appereance: BDUIAppereance?
     public let elements: [BDUIComponentModel]
     public let content: BDUIComponentContent?
+	public let tapUrlAction: URL?
 
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -24,6 +25,7 @@ public struct BDUIComponentModel: Decodable, Equatable {
         self.appereance = try container.decodeIfPresent(BDUIAppereance.self, forKey: .appereance)
         self.elements = try container.decodeIfPresent([BDUIComponentModel].self, forKey: .elements) ?? []
         self.content = try container.decodeIfPresent(BDUIComponentContent.self, forKey: .content)
+		self.tapUrlAction = try container.decodeIfPresent(URL.self, forKey: .tapUrlAction)
     }
 
     private enum CodingKeys: CodingKey {
@@ -33,5 +35,6 @@ public struct BDUIComponentModel: Decodable, Equatable {
         case appereance
         case elements
         case content
+		case tapUrlAction
     }
 }

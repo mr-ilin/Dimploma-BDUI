@@ -6,39 +6,61 @@
 //
 
 import UIKit
+import TinyConstraints
 
-protocol BDUIViewFactory {
-    func createView(from model: BDUIComponentModel) -> UIView
+// MARK: - Protocols
+public protocol BDUIViewFactoryDelegate: AnyObject {
+	func handleAction(with url: URL)
 }
 
-final class BDUIViewFactoryImpl {}
+public protocol BDUIViewFactory {
+	func createViewController(for screenModel: BDUIScreen) -> UIViewController
+}
 
+// MARK: - BDUIViewFactoryImpl
+public final class BDUIViewFactoryImpl {
+	weak var delegate: BDUIViewFactoryDelegate?
+
+	private func createView(from model: BDUIComponentModel) -> UIView {
+		let bduiView: BDUIView = {
+			switch model.type {
+			case .container:
+				let containerView = BDUIContainerView()
+				let subelements = model.elements.map {
+					createView(from: $0)
+				}
+				containerView.addElements(with: subelements)
+
+				return containerView
+
+			case .spacer:
+				return BDUISpacerView()
+
+			case .label:
+				return BDUILabelView()
+			}
+		}()
+
+		bduiView.setup(with: model)
+		if let url = model.tapUrlAction {
+			bduiView.tapAction = { [weak delegate, url] in
+				delegate?.handleAction(with: url)
+			}
+		}
+
+		return bduiView
+	}
+}
+
+// MARK: - BDUIViewFactory
 extension BDUIViewFactoryImpl: BDUIViewFactory {
-    func createView(from model: BDUIComponentModel) -> UIView {
-        switch model.type {
-        case .container:
-            let containerView = BDUIContainerView()
-            containerView.setup(with: model)
+	public func createViewController(for screenModel: BDUIScreen) -> UIViewController {
+		let vc = UIViewController()
+		let bduiView = createView(from: screenModel.rootElement)
 
-            let subelements = model.elements.map {
-                createView(from: $0)
-            }
-            containerView.addElements(with: subelements)
+		vc.view.addSubview(bduiView)
+		bduiView.edgesToSuperview()
 
-            return containerView
-
-        case .spacer:
-            let spacerView = BDUISpacerView()
-            spacerView.setup(with: model)
-
-            return spacerView
-
-        case .label:
-            let labelView = BDUILabelView()
-            labelView.setup(with: model)
-
-            return labelView
-
-        }
-    }
+		return vc
+	}
 }

@@ -7,10 +7,25 @@
 
 import UIKit
 
-class Coordinator {
+protocol CoordinatorProtocol: DeeplinkHandlerProtocol {
+    init(navigationController: UINavigationController?)
+    func configure(with navigationController: UINavigationController?)
+    func configureChild(_ child: CoordinatorProtocol)
+    func start()
+    func push(_ viewController: UIViewController, animated: Bool)
+    func pop(animated: Bool)
+    func addChildCoordinator(_ child: BaseCoordinator)
+}
+
+extension CoordinatorProtocol {
+    func canOpenURL(_ url: URL) -> Bool { false }
+    func openURL(_ url: URL) {}
+}
+
+class BaseCoordinator: CoordinatorProtocol {
     private weak var navigationController: UINavigationController?
 
-    init(navigationController: UINavigationController? = nil) {
+    required init(navigationController: UINavigationController?) {
         self.navigationController = navigationController
     }
 
@@ -18,7 +33,7 @@ class Coordinator {
         self.navigationController = navigationController
     }
 
-    func configureChild(_ child: Coordinator) {
+    func configureChild(_ child: CoordinatorProtocol) {
         child.configure(with: self.navigationController)
     }
 
@@ -38,7 +53,7 @@ class Coordinator {
         navigationController?.present(viewController, animated: animated, completion: nil)
     }
 
-    func addChildCoordinator(_ child: Coordinator) {
+    func addChildCoordinator(_ child: BaseCoordinator) {
         child.navigationController = navigationController
     }
 }

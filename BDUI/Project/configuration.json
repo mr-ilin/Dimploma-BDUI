@@ -1,0 +1,113 @@
+{
+  "mainScreenId": "first",
+  "screens": [
+    {
+      "id": "first",
+      "rootElement":
+      {
+        "type": "container",
+        "layout":
+        {
+          "paddings":
+          {
+            "top": 50,
+            "left": 50,
+            "right": 50,
+            "bottom": 50
+          }
+        },
+        "appereance":
+        {
+          "backgroundColor": "#868780ff" 
+        },
+        "elements": [
+          {
+            "type": "label",
+            "layout":
+            {
+              "paddings":
+              {
+                "top": 16,
+                "left": 16,
+                "right": 16,
+                "bottom": 16
+              }
+            },
+            "border": {
+              "width": 2.0,
+              "cornerRadius": 8.0
+            },
+            "appereance":
+            {
+              "backgroundColor": "#ffffffff"
+            },
+            "content":
+            {
+              "text": "Hello world!",
+              "textAlignment": "right",
+              "fontStyle": "largeTitle"
+            },
+            "tapUrlAction": "open_screen/second"
+          },
+          {
+            "type": "spacer"
+          }
+        ]
+      }
+    },
+    {
+      "id": "second",
+      "rootElement":
+      {
+        "type": "container",
+        "layout":
+        {
+          "paddings":
+          {
+            "top": 50,
+            "left": 50,
+            "right": 50,
+            "bottom": 50
+          }
+        },
+        "appereance":
+        {
+          "backgroundColor": "#c6e2ffff"
+        },
+        "elements": [
+          {
+            "type": "spacer"
+          },
+          {
+            "type": "label",
+            "layout":
+            {
+              "paddings":
+              {
+                "top": 16,
+                "left": 16,
+                "right": 16,
+                "bottom": 16
+              }
+            },
+            "border": {
+              "width": 2.0,
+              "cornerRadius": 8.0
+            },
+            "appereance":
+            {
+              "backgroundColor": "#ffffffff"
+            },
+            "content":
+            {
+              "text": "Hello world!",
+              "textAlignment": "right",
+              "fontStyle": "largeTitle"
+            },
+            "tapUrlAction": "open_screen/first"
+          }
+        ]
+      }
+    }
+  ]
+}

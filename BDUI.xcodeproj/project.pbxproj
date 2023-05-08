@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F60D485729F024BA00B49733 /* BDUICoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60D485629F024BA00B49733 /* BDUICoordinator.swift */; };
 		F61646E529E5CF6800567A5B /* UIColor+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61646E429E5CF6800567A5B /* UIColor+extensions.swift */; };
 		F63A34D929E86CBF001F0A6D /* BDUIFontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A34D829E86CBF001F0A6D /* BDUIFontStyle.swift */; };
 		F63A34DB29E86E2A001F0A6D /* BDUITextAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A34DA29E86E2A001F0A6D /* BDUITextAlignment.swift */; };
+		F63A34E229E87664001F0A6D /* DeeplinkHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A34E129E87664001F0A6D /* DeeplinkHandlerProtocol.swift */; };
+		F63A34E429E89496001F0A6D /* BDUIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A34E329E89496001F0A6D /* BDUIManager.swift */; };
+		F65D31CA2A094ED900D8DB07 /* Collection+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65D31C92A094ED900D8DB07 /* Collection+extensions.swift */; };
 		F6894D8C29E5D0C5006D7A0D /* BDUILabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6894D8B29E5D0C5006D7A0D /* BDUILabelView.swift */; };
 		F6894D8E29E5D7E7006D7A0D /* BDUIContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6894D8D29E5D7E7006D7A0D /* BDUIContainerView.swift */; };
 		F6894D9229E703CA006D7A0D /* configuration.json in Resources */ = {isa = PBXBuildFile; fileRef = F6894D9129E703CA006D7A0D /* configuration.json */; };
@@ -28,11 +32,10 @@
 		F6D2332929DF24B70077E16D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6D2332729DF24B70077E16D /* LaunchScreen.storyboard */; };
 		F6D2333229DF29240077E16D /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = F6D2333129DF29240077E16D /* TinyConstraints */; };
 		F6D2333429DF2A830077E16D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2333329DF2A830077E16D /* AppCoordinator.swift */; };
-		F6D2333629DF2ACC0077E16D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2333529DF2ACC0077E16D /* Coordinator.swift */; };
-		F6D2333929DF2C440077E16D /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2333829DF2C440077E16D /* MainCoordinator.swift */; };
+		F6D2333629DF2ACC0077E16D /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2333529DF2ACC0077E16D /* BaseCoordinator.swift */; };
 		F6D2333C29DF31FD0077E16D /* BDUIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2333B29DF31FD0077E16D /* BDUIParser.swift */; };
 		F6D2333E29DF32580077E16D /* BDUIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2333D29DF32580077E16D /* BDUIConfiguration.swift */; };
-		F6D2334029DF335C0077E16D /* BDUIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2333F29DF335C0077E16D /* BDUIController.swift */; };
+		F6D2334029DF335C0077E16D /* BDUIScreensController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2333F29DF335C0077E16D /* BDUIScreensController.swift */; };
 		F6D2334229DF35D70077E16D /* BDUIComponentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2334129DF35D70077E16D /* BDUIComponentModel.swift */; };
 		F6D2334429DF36050077E16D /* BDUIComponentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2334329DF36050077E16D /* BDUIComponentType.swift */; };
 		F6D2334A29E1BE0F0077E16D /* BDUIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2334929E1BE0F0077E16D /* BDUIScreen.swift */; };
@@ -42,9 +45,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F60D485629F024BA00B49733 /* BDUICoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUICoordinator.swift; sourceTree = "<group>"; };
 		F61646E429E5CF6800567A5B /* UIColor+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extensions.swift"; sourceTree = "<group>"; };
 		F63A34D829E86CBF001F0A6D /* BDUIFontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUIFontStyle.swift; sourceTree = "<group>"; };
 		F63A34DA29E86E2A001F0A6D /* BDUITextAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUITextAlignment.swift; sourceTree = "<group>"; };
+		F63A34E129E87664001F0A6D /* DeeplinkHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkHandlerProtocol.swift; sourceTree = "<group>"; };
+		F63A34E329E89496001F0A6D /* BDUIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUIManager.swift; sourceTree = "<group>"; };
+		F65D31C92A094ED900D8DB07 /* Collection+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+extensions.swift"; sourceTree = "<group>"; };
 		F6894D8B29E5D0C5006D7A0D /* BDUILabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUILabelView.swift; sourceTree = "<group>"; };
 		F6894D8D29E5D7E7006D7A0D /* BDUIContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUIContainerView.swift; sourceTree = "<group>"; };
 		F6894D9129E703CA006D7A0D /* configuration.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = configuration.json; sourceTree = "<group>"; };
@@ -64,11 +71,10 @@
 		F6D2332829DF24B70077E16D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6D2332A29DF24B70077E16D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6D2333329DF2A830077E16D /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		F6D2333529DF2ACC0077E16D /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		F6D2333829DF2C440077E16D /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		F6D2333529DF2ACC0077E16D /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		F6D2333B29DF31FD0077E16D /* BDUIParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUIParser.swift; sourceTree = "<group>"; };
 		F6D2333D29DF32580077E16D /* BDUIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUIConfiguration.swift; sourceTree = "<group>"; };
-		F6D2333F29DF335C0077E16D /* BDUIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUIController.swift; sourceTree = "<group>"; };
+		F6D2333F29DF335C0077E16D /* BDUIScreensController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUIScreensController.swift; sourceTree = "<group>"; };
 		F6D2334129DF35D70077E16D /* BDUIComponentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUIComponentModel.swift; sourceTree = "<group>"; };
 		F6D2334329DF36050077E16D /* BDUIComponentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUIComponentType.swift; sourceTree = "<group>"; };
 		F6D2334929E1BE0F0077E16D /* BDUIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUIScreen.swift; sourceTree = "<group>"; };
@@ -94,14 +100,34 @@
 			children = (
 				F63A34DC29E87568001F0A6D /* Coordination */,
 				F61646E429E5CF6800567A5B /* UIColor+extensions.swift */,
+				F65D31C92A094ED900D8DB07 /* Collection+extensions.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		F62BF1B929E95868006F064B /* BDUIUniversal */ = {
+			isa = PBXGroup;
+			children = (
+				F60D485629F024BA00B49733 /* BDUICoordinator.swift */,
+			);
+			path = BDUIUniversal;
+			sourceTree = "<group>";
+		};
+		F62BF1BA29E9587D006F064B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F6D2331E29DF24B10077E16D /* SceneDelegate.swift */,
+				F6D2331C29DF24B10077E16D /* AppDelegate.swift */,
+				F6D2333329DF2A830077E16D /* AppCoordinator.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		F63A34DC29E87568001F0A6D /* Coordination */ = {
 			isa = PBXGroup;
 			children = (
-				F6D2333529DF2ACC0077E16D /* Coordinator.swift */,
+				F6D2333529DF2ACC0077E16D /* BaseCoordinator.swift */,
+				F63A34E129E87664001F0A6D /* DeeplinkHandlerProtocol.swift */,
 			);
 			path = Coordination;
 			sourceTree = "<group>";
@@ -109,10 +135,10 @@
 		F63A34DF29E875E6001F0A6D /* Project */ = {
 			isa = PBXGroup;
 			children = (
-				F6D2333729DF2C390077E16D /* Main */,
-				F6D2333329DF2A830077E16D /* AppCoordinator.swift */,
-				F6D2331C29DF24B10077E16D /* AppDelegate.swift */,
-				F6D2331E29DF24B10077E16D /* SceneDelegate.swift */,
+				F6D2332529DF24B70077E16D /* Assets.xcassets */,
+				F6894D9129E703CA006D7A0D /* configuration.json */,
+				F62BF1B929E95868006F064B /* BDUIUniversal */,
+				F62BF1BA29E9587D006F064B /* App */,
 				F63A34E029E875F8001F0A6D /* Derived */,
 			);
 			path = Project;
@@ -121,7 +147,6 @@
 		F63A34E029E875F8001F0A6D /* Derived */ = {
 			isa = PBXGroup;
 			children = (
-				F6D2332529DF24B70077E16D /* Assets.xcassets */,
 				F6D2332729DF24B70077E16D /* LaunchScreen.storyboard */,
 				F6D2332A29DF24B70077E16D /* Info.plist */,
 			);
@@ -173,23 +198,15 @@
 			path = BDUI;
 			sourceTree = "<group>";
 		};
-		F6D2333729DF2C390077E16D /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				F6D2333829DF2C440077E16D /* MainCoordinator.swift */,
-				F6894D9129E703CA006D7A0D /* configuration.json */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
 		F6D2333A29DF313E0077E16D /* BDUI framework */ = {
 			isa = PBXGroup;
 			children = (
 				F6D37D8829E4923E009F0556 /* Views */,
 				F6D2334829E1BDCD0077E16D /* Models */,
 				F6D2333B29DF31FD0077E16D /* BDUIParser.swift */,
-				F6D2333F29DF335C0077E16D /* BDUIController.swift */,
+				F6D2333F29DF335C0077E16D /* BDUIScreensController.swift */,
 				F6D2334B29E1CC9C0077E16D /* BDUIViewFactory.swift */,
+				F63A34E329E89496001F0A6D /* BDUIManager.swift */,
 			);
 			path = "BDUI framework";
 			sourceTree = "<group>";
@@ -308,19 +325,22 @@
 				F6894DA329E70937006D7A0D /* BDUIComponentContent.swift in Sources */,
 				F6D2333429DF2A830077E16D /* AppCoordinator.swift in Sources */,
 				F6894D9629E7088D006D7A0D /* BDUIAxisType.swift in Sources */,
-				F6D2333629DF2ACC0077E16D /* Coordinator.swift in Sources */,
+				F6D2333629DF2ACC0077E16D /* BaseCoordinator.swift in Sources */,
 				F6D2331D29DF24B10077E16D /* AppDelegate.swift in Sources */,
+				F60D485729F024BA00B49733 /* BDUICoordinator.swift in Sources */,
 				F6D2334A29E1BE0F0077E16D /* BDUIScreen.swift in Sources */,
 				F6D37D8A29E49291009F0556 /* BDUIViewConfigurable.swift in Sources */,
+				F63A34E229E87664001F0A6D /* DeeplinkHandlerProtocol.swift in Sources */,
 				F61646E529E5CF6800567A5B /* UIColor+extensions.swift in Sources */,
 				F6894D8E29E5D7E7006D7A0D /* BDUIContainerView.swift in Sources */,
-				F6D2333929DF2C440077E16D /* MainCoordinator.swift in Sources */,
 				F6894D8C29E5D0C5006D7A0D /* BDUILabelView.swift in Sources */,
 				F6D2331F29DF24B10077E16D /* SceneDelegate.swift in Sources */,
-				F6D2334029DF335C0077E16D /* BDUIController.swift in Sources */,
+				F6D2334029DF335C0077E16D /* BDUIScreensController.swift in Sources */,
 				F6D2334C29E1CC9C0077E16D /* BDUIViewFactory.swift in Sources */,
 				F6894D9E29E708EC006D7A0D /* BDUIBorder.swift in Sources */,
+				F65D31CA2A094ED900D8DB07 /* Collection+extensions.swift in Sources */,
 				F6894D9429E70872006D7A0D /* BDUIPaddings.swift in Sources */,
+				F63A34E429E89496001F0A6D /* BDUIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
