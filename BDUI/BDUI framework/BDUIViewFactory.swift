@@ -59,7 +59,7 @@ extension BDUIViewFactoryImpl: BDUIViewFactory {
 		let bduiView = createView(from: screenModel.rootElement)
 
 		vc.view.addSubview(bduiView)
-		bduiView.edgesToSuperview()
+		bduiView.edgesToSuperview(usingSafeArea: true)
 
 		return vc
 	}
