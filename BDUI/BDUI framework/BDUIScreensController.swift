@@ -13,9 +13,9 @@ public protocol BDUIScreenControllerOutput: AnyObject {
 }
 
 public protocol BDUIScreensController: AnyObject {
-    func renderMain() -> UIViewController?
+	func tabsModels() -> [BDUITab]
 	func render(by url: URL) -> UIViewController?
-	func canOpenScreen(for url: URL) -> Bool
+	func canOpenScreen(for url: URL, from tabId: BDUITab.Id) -> Bool
 }
 
 // MARK: - BDUIScreensControllerImpl
@@ -44,8 +44,8 @@ public final class BDUIScreensControllerImpl {
 		}
     }
 
-	private func render(by id: BDUIScreen.Id) -> UIViewController? {
-		guard let screen = screensById[id] else {
+	private func render(by id: BDUIScreen.Id?) -> UIViewController? {
+		guard let id, let screen = screensById[id] else {
 			return nil
 		}
 
@@ -55,28 +55,30 @@ public final class BDUIScreensControllerImpl {
 
 // MARK: - BDUIScreensController
 extension BDUIScreensControllerImpl: BDUIScreensController {
-	public func renderMain() -> UIViewController? {
-		render(by: configuration.mainScreenId)
+	public func tabsModels() -> [BDUITab] {
+		configuration.tabs
 	}
 
 	public func render(by url: URL) -> UIViewController? {
 		guard url.pathComponents.first == "open_screen",
-			  let id = url.pathComponents[safe: 1]
+			  let targetScreenId = url.pathComponents[safe: 2]
 		else {
 			return nil
 		}
 
-		return render(by: id)
+		return render(by: targetScreenId)
 	}
 
-	public func canOpenScreen(for url: URL) -> Bool {
+	public func canOpenScreen(for url: URL, from tabId: BDUITab.Id) -> Bool {
 		guard url.pathComponents.first == "open_screen",
-			  let id = url.pathComponents[safe: 1]
+			  let targetTabId = url.pathComponents[safe: 1],
+			  let targetScreenId = url.pathComponents[safe: 2],
+ 			  targetTabId == tabId
 		else {
 			return false
 		}
 
-		return screensById[id] != nil
+		return screensById[targetScreenId] != nil
 	}
 }
 

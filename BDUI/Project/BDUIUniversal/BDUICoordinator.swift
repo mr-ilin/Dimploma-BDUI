@@ -8,31 +8,39 @@
 import UIKit
 
 final class BDUICoordinator: BaseCoordinator {
-	private lazy var manager: BDUIManager = BDUIManagerImpl(screenControllerOutput: self)
+	private weak var screenController: BDUIScreensController?
+
+	private let assosiatedTabId: BDUITab.Id
+	private let initialUrl: URL
+
+	init(
+		screenController: BDUIScreensController?,
+		navigationController: UINavigationController,
+		assosiatedTabId: BDUITab.Id,
+		initialUrl: URL
+	) {
+		self.screenController = screenController
+		self.assosiatedTabId = assosiatedTabId
+		self.initialUrl = initialUrl
+		
+		super.init(navigationController: navigationController)
+	}
+
+	required init(navigationController: UINavigationController?) {
+		fatalError()
+	}
 
 	override func start() {
-		if let mainViewController = manager.screenController?.renderMain() {
-			push(mainViewController, animated: true)
-		}
+		openURL(initialUrl)
 	}
 
-	func canOpenURL(_ url: URL) -> Bool {
-		manager.screenController?.canOpenScreen(for: url) ?? false
+	override func canOpenURL(_ url: URL) -> Bool {
+		screenController?.canOpenScreen(for: url, from: assosiatedTabId) ?? false
 	}
 
-	func openURL(_ url: URL) {
-		if let vc = manager.screenController?.render(by: url) {
+	override func openURL(_ url: URL) {
+		if let vc = screenController?.render(by: url) {
 			push(vc, animated: true)
 		}
-	}
-}
-
-extension BDUICoordinator: BDUIScreenControllerOutput {
-	func openScreen(for url: URL) {
-		guard canOpenURL(url) else {
-			return
-		}
-
-		openURL(url)
 	}
 }

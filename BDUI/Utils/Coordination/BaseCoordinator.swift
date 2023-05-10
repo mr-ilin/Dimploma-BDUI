@@ -17,11 +17,6 @@ protocol CoordinatorProtocol: DeeplinkHandlerProtocol {
     func addChildCoordinator(_ child: BaseCoordinator)
 }
 
-extension CoordinatorProtocol {
-    func canOpenURL(_ url: URL) -> Bool { false }
-    func openURL(_ url: URL) {}
-}
-
 class BaseCoordinator: CoordinatorProtocol {
     private weak var navigationController: UINavigationController?
 
@@ -56,4 +51,10 @@ class BaseCoordinator: CoordinatorProtocol {
     func addChildCoordinator(_ child: BaseCoordinator) {
         child.navigationController = navigationController
     }
+
+	func canOpenURL(_ url: URL) -> Bool {
+		false
+	}
+
+	func openURL(_ url: URL) {}
 }

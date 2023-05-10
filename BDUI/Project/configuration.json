@@ -1,8 +1,22 @@
 {
-  "mainScreenId": "first",
+  "tabs": [
+    {
+      "id": "firstTab",
+      "rootScreenUrl": "open_screen/firstTab/firstScreen",
+      "title": "first",
+      "image": "1.circle"
+    },
+    {
+      "id": "secondTab",
+      "rootScreenUrl": "open_screen/secondTab/secondScreen",
+      "title": "second",
+      "image": "2.circle"
+    }
+  ],
+  "mainTabId": "firstTab",
   "screens": [
     {
-      "id": "first",
+      "id": "firstScreen",
       "rootElement":
       {
         "type": "container",
@@ -48,7 +62,7 @@
               "textAlignment": "right",
               "fontStyle": "largeTitle"
             },
-            "tapUrlAction": "open_screen/second"
+            "tapUrlAction": "open_screen/firstTab/secondScreen"
           },
           {
             "type": "spacer"
@@ -70,13 +84,13 @@
               "text": "Button",
               "buttonConfiguration": "filled"
             },
-            "tapUrlAction": "open_screen/second"
+            "tapUrlAction": "open_screen/firstTab/secondScreen"
           }
         ]
       }
     },
     {
-      "id": "second",
+      "id": "secondScreen",
       "rootElement":
       {
         "type": "container",
@@ -125,7 +139,26 @@
               "textAlignment": "right",
               "fontStyle": "largeTitle"
             },
-            "tapUrlAction": "open_screen/first"
+            "tapUrlAction": "open_screen/secondTab/firstScreen"
+          },
+          {
+            "type": "button",
+            "layout":
+            {
+              "paddings":
+              {
+                "top": 16,
+                "left": 16,
+                "right": 16,
+                "bottom": 16
+              }
+            },
+            "content":
+            {
+              "text": "Button",
+              "buttonConfiguration": "filled"
+            },
+            "tapUrlAction": "open_screen/secondTab/firstScreen"
           }
         ]
       }

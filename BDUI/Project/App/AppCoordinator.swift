@@ -17,6 +17,8 @@ protocol AppCoordinatorProtocol: AnyObject {
 }
 
 final class AppCoordinator: AppCoordinatorProtocol {
+	private lazy var manager: BDUIManager = BDUIManagerImpl(screenControllerOutput: self)
+
     private let window: UIWindow
     private var childs = [CoordinatorProtocol]()
 
@@ -25,17 +27,35 @@ final class AppCoordinator: AppCoordinatorProtocol {
     }
 
     func start() {
-        let navigationController = UINavigationController()
+		let tabBarController = UITabBarController()
+		tabBarController.tabBar.tintColor = .tintColor
+		tabBarController.tabBar.isTranslucent = false
 
-		let bduiCoordinator = BDUICoordinator(
-			navigationController: navigationController
-		)
-		childs.append(bduiCoordinator)
+		var viewControllers = [UIViewController]()
+		manager.screenController.tabsModels().forEach { tabModel in
+			let vc = UINavigationController()
+			vc.navigationItem.title = tabModel.title
+			vc.tabBarItem.title = tabModel.title
+			if let imageName = tabModel.image {
+				vc.tabBarItem.image = UIImage(systemName: imageName)
+			}
 
-        window.rootViewController = navigationController
+			let coordinator = BDUICoordinator(
+				screenController: manager.screenController,
+				navigationController: vc,
+				assosiatedTabId: tabModel.id,
+				initialUrl: tabModel.rootScreenUrl
+			)
+
+			viewControllers.append(vc)
+			childs.append(coordinator)
+			coordinator.start()
+		}
+
+		tabBarController.setViewControllers(viewControllers, animated: false)
+
+        window.rootViewController = tabBarController
         window.makeKeyAndVisible()
-
-		bduiCoordinator.start()
     }
 
     func addChildCoordinator(_ childCoordinator: CoordinatorProtocol) {
@@ -51,4 +71,10 @@ final class AppCoordinator: AppCoordinatorProtocol {
         childHandler.openURL(url)
         return true
     }
+}
+
+extension AppCoordinator: BDUIScreenControllerOutput {
+	func openScreen(for url: URL) {
+		handleURL(url)
+	}
 }

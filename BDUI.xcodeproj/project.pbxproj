@@ -16,6 +16,7 @@
 		F65D31CA2A094ED900D8DB07 /* Collection+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65D31C92A094ED900D8DB07 /* Collection+extensions.swift */; };
 		F65D31CC2A09889A00D8DB07 /* BDUIButtonConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65D31CB2A09889A00D8DB07 /* BDUIButtonConfiguration.swift */; };
 		F65D31CE2A0989B600D8DB07 /* BDUIButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65D31CD2A0989B600D8DB07 /* BDUIButtonView.swift */; };
+		F65D31D02A0AC6CA00D8DB07 /* BDUITab.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65D31CF2A0AC6CA00D8DB07 /* BDUITab.swift */; };
 		F6894D8C29E5D0C5006D7A0D /* BDUILabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6894D8B29E5D0C5006D7A0D /* BDUILabelView.swift */; };
 		F6894D8E29E5D7E7006D7A0D /* BDUIContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6894D8D29E5D7E7006D7A0D /* BDUIContainerView.swift */; };
 		F6894D9229E703CA006D7A0D /* configuration.json in Resources */ = {isa = PBXBuildFile; fileRef = F6894D9129E703CA006D7A0D /* configuration.json */; };
@@ -56,6 +57,7 @@
 		F65D31C92A094ED900D8DB07 /* Collection+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+extensions.swift"; sourceTree = "<group>"; };
 		F65D31CB2A09889A00D8DB07 /* BDUIButtonConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUIButtonConfiguration.swift; sourceTree = "<group>"; };
 		F65D31CD2A0989B600D8DB07 /* BDUIButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUIButtonView.swift; sourceTree = "<group>"; };
+		F65D31CF2A0AC6CA00D8DB07 /* BDUITab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUITab.swift; sourceTree = "<group>"; };
 		F6894D8B29E5D0C5006D7A0D /* BDUILabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUILabelView.swift; sourceTree = "<group>"; };
 		F6894D8D29E5D7E7006D7A0D /* BDUIContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUIContainerView.swift; sourceTree = "<group>"; };
 		F6894D9129E703CA006D7A0D /* configuration.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = configuration.json; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				F6894D9F29E708FA006D7A0D /* Component models */,
 				F6D2334929E1BE0F0077E16D /* BDUIScreen.swift */,
 				F6D2333D29DF32580077E16D /* BDUIConfiguration.swift */,
+				F65D31CF2A0AC6CA00D8DB07 /* BDUITab.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				F6D2334229DF35D70077E16D /* BDUIComponentModel.swift in Sources */,
 				F63A34D929E86CBF001F0A6D /* BDUIFontStyle.swift in Sources */,
 				F6894DA329E70937006D7A0D /* BDUIComponentContent.swift in Sources */,
+				F65D31D02A0AC6CA00D8DB07 /* BDUITab.swift in Sources */,
 				F6D2333429DF2A830077E16D /* AppCoordinator.swift in Sources */,
 				F6894D9629E7088D006D7A0D /* BDUIAxisType.swift in Sources */,
 				F6D2333629DF2ACC0077E16D /* BaseCoordinator.swift in Sources */,

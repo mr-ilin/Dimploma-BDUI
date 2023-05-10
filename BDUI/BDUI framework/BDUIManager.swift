@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - Protocols
 public protocol BDUIManager {
-    var screenController: BDUIScreensController? { get }
+    var screenController: BDUIScreensController { get }
 }
 
 // MARK: - BDUIManagerImpl
@@ -18,15 +18,13 @@ final public class BDUIManagerImpl: BDUIManager {
     private let viewFactory: BDUIViewFactoryImpl
 
 	// MARK: Public properties
-	public let screenController: BDUIScreensController?
+	public let screenController: BDUIScreensController
 
 	// MARK: Init
 	init(screenControllerOutput: BDUIScreenControllerOutput?) {
 		viewFactory = BDUIViewFactoryImpl()
-		let screenController: BDUIScreensControllerImpl? = { [viewFactory] in
-            guard let configuration = BDUIManagerImpl.getConfiguration() else {
-                return nil
-            }
+		let screenController: BDUIScreensControllerImpl = { [viewFactory] in
+            let configuration = BDUIManagerImpl.getConfiguration()!
 
             return BDUIScreensControllerImpl(
                 configuration: configuration,
