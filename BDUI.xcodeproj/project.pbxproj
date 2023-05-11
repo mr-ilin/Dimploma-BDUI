@@ -29,6 +29,7 @@
 		F6894DA129E70927006D7A0D /* BDUIAppereance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6894DA029E70927006D7A0D /* BDUIAppereance.swift */; };
 		F6894DA329E70937006D7A0D /* BDUIComponentContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6894DA229E70937006D7A0D /* BDUIComponentContent.swift */; };
 		F6894DA529E7287F006D7A0D /* BDUISpacerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6894DA429E7287F006D7A0D /* BDUISpacerView.swift */; };
+		F699BB8C2A0D559C00F7D348 /* configuration_different_style.json in Resources */ = {isa = PBXBuildFile; fileRef = F699BB8B2A0D559C00F7D348 /* configuration_different_style.json */; };
 		F6D2331D29DF24B10077E16D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2331C29DF24B10077E16D /* AppDelegate.swift */; };
 		F6D2331F29DF24B10077E16D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2331E29DF24B10077E16D /* SceneDelegate.swift */; };
 		F6D2332629DF24B70077E16D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6D2332529DF24B70077E16D /* Assets.xcassets */; };
@@ -60,7 +61,7 @@
 		F65D31CF2A0AC6CA00D8DB07 /* BDUITab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUITab.swift; sourceTree = "<group>"; };
 		F6894D8B29E5D0C5006D7A0D /* BDUILabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUILabelView.swift; sourceTree = "<group>"; };
 		F6894D8D29E5D7E7006D7A0D /* BDUIContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUIContainerView.swift; sourceTree = "<group>"; };
-		F6894D9129E703CA006D7A0D /* configuration.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = configuration.json; sourceTree = "<group>"; };
+		F6894D9129E703CA006D7A0D /* configuration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = configuration.json; sourceTree = "<group>"; };
 		F6894D9329E70872006D7A0D /* BDUIPaddings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUIPaddings.swift; sourceTree = "<group>"; };
 		F6894D9529E7088D006D7A0D /* BDUIAxisType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUIAxisType.swift; sourceTree = "<group>"; };
 		F6894D9729E708A4006D7A0D /* BDUIDistributionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUIDistributionType.swift; sourceTree = "<group>"; };
@@ -70,6 +71,7 @@
 		F6894DA029E70927006D7A0D /* BDUIAppereance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUIAppereance.swift; sourceTree = "<group>"; };
 		F6894DA229E70937006D7A0D /* BDUIComponentContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUIComponentContent.swift; sourceTree = "<group>"; };
 		F6894DA429E7287F006D7A0D /* BDUISpacerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUISpacerView.swift; sourceTree = "<group>"; };
+		F699BB8B2A0D559C00F7D348 /* configuration_different_style.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = configuration_different_style.json; sourceTree = "<group>"; };
 		F6D2331929DF24B10077E16D /* BDUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BDUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6D2331C29DF24B10077E16D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6D2331E29DF24B10077E16D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			children = (
 				F6D2332529DF24B70077E16D /* Assets.xcassets */,
 				F6894D9129E703CA006D7A0D /* configuration.json */,
+				F699BB8B2A0D559C00F7D348 /* configuration_different_style.json */,
 				F62BF1B929E95868006F064B /* BDUIUniversal */,
 				F62BF1BA29E9587D006F064B /* App */,
 				F63A34E029E875F8001F0A6D /* Derived */,
@@ -306,6 +309,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F699BB8C2A0D559C00F7D348 /* configuration_different_style.json in Resources */,
 				F6D2332929DF24B70077E16D /* LaunchScreen.storyboard in Resources */,
 				F6894D9229E703CA006D7A0D /* configuration.json in Resources */,
 				F6D2332629DF24B70077E16D /* Assets.xcassets in Resources */,
