@@ -1,38 +1,35 @@
 {
   "tabs": [
     {
-      "id": "firstTab",
-      "rootScreenUrl": "open_screen/firstTab/firstScreen",
-      "title": "first",
-      "image": "1.circle"
+      "id": "homeTab",
+      "rootScreenUrl": "open_screen/homeTab/homeScreen",
+      "image": "house.fill"
     },
     {
-      "id": "secondTab",
-      "rootScreenUrl": "open_screen/secondTab/secondScreen",
-      "title": "second",
-      "image": "2.circle"
+      "id": "historyTab",
+      "rootScreenUrl": "open_screen/historyTab/historyScreen",
+      "image": "clock.fill"
+    },
+    {
+      "id": "settingsTab",
+      "rootScreenUrl": "open_screen/settingsTab/settingsScreen",
+      "image": "gearshape.fill"
     }
   ],
-  "mainTabId": "firstTab",
+  "mainTabId": "homeTab",
   "screens": [
     {
-      "id": "firstScreen",
+      "id": "homeScreen",
       "rootElement":
       {
         "type": "container",
-        "layout":
+        "border":
         {
-          "paddings":
-          {
-            "top": 50,
-            "left": 50,
-            "right": 50,
-            "bottom": 50
-          }
+          "cornerRadius": 36
         },
         "appereance":
         {
-          "backgroundColor": "#ffffffff"
+          "backgroundColor": "#6d9773ff"
         },
         "elements": [
           {
@@ -41,124 +38,382 @@
             {
               "paddings":
               {
-                "top": 16,
+                "top": 32,
                 "left": 16,
                 "right": 16,
-                "bottom": 16
+                "bottom": 32
+              }
+            },
+            "content":
+            {
+              "text": "Доброе утро!",
+              "textAlignment": "right",
+              "fontStyle": "headline",
+              "fontSize": 32,
+              "fontColor": "#ffffffff"
+            }
+          },
+          {
+            "type": "container",
+            "layout":
+            {
+              "spacing": 8,
+              "paddings":
+              {
+                "top": 24,
+                "left": 24,
+                "right": 24,
+                "bottom": 24
               }
             },
             "border":
             {
-              "width": 2.0,
-              "cornerRadius": 8.0
+              "cornerRadius": 36
             },
             "appereance":
             {
               "backgroundColor": "#ffffffff"
             },
-            "content":
-            {
-              "text": "Hello world!",
-              "textAlignment": "right",
-              "fontStyle": "largeTitle"
-            },
-            "tapUrlAction": "open_screen/firstTab/secondScreen"
-          },
-          {
-            "type": "spacer"
-          },
-          {
-            "type": "button",
-            "layout":
-            {
-              "paddings":
+            "elements": [
               {
-                "top": 16,
-                "left": 16,
-                "right": 16,
-                "bottom": 16
+                "type": "label",
+                "content":
+                {
+                  "text": "Ваши успехи на сегодня",
+                  "textAlignment": "left",
+                  "fontStyle": "title1",
+                  "fontColor": "#0c3b2eff"
+                }
+              },
+              {
+                "type": "spacer",
+                "border":
+                {
+                  "cornerRadius": 8,
+                  "width": 1
+                }
+              },
+              {
+                "type": "label",
+                "layout":
+                {
+                  "height": 42
+                },
+                "border":
+                {
+                  "cornerRadius": 12
+                },
+                "appereance":
+                {
+                  "backgroundColor": "#bb8a52ff"
+                },
+                "content":
+                {
+                  "text": "Записаться на тренировку",
+                  "textAlignment": "center",
+                  "fontStyle": "headline",
+                  "fontColor": "#ffffffff"
+                },
+                "tapUrlAction": "open_screen/homeTab/appointmentsScreen"
               }
-            },
-            "content":
-            {
-              "text": "Button",
-              "buttonConfiguration": "filled"
-            },
-            "tapUrlAction": "open_screen/firstTab/secondScreen"
+            ]
           }
         ]
       }
     },
     {
-      "id": "secondScreen",
+      "id": "historyScreen",
       "rootElement":
       {
         "type": "container",
-        "layout":
+        "border":
         {
-          "paddings":
-          {
-            "top": 50,
-            "left": 50,
-            "right": 50,
-            "bottom": 50
-          }
+          "cornerRadius": 36
         },
         "appereance":
         {
-          "backgroundColor": "#c6e2ffff"
+          "backgroundColor": "#0c3b2eff"
         },
         "elements": [
-          {
-            "type": "spacer"
-          },
           {
             "type": "label",
             "layout":
             {
               "paddings":
               {
-                "top": 16,
+                "top": 32,
                 "left": 16,
                 "right": 16,
-                "bottom": 16
+                "bottom": 32
+              }
+            },
+            "content":
+            {
+              "text": "Ваши записи",
+              "textAlignment": "left",
+              "fontStyle": "headline",
+              "fontSize": 32,
+              "fontColor": "#ffffffff"
+            }
+          },
+          {
+            "type": "container",
+            "layout":
+            {
+              "paddings":
+              {
+                "top": 24,
+                "left": 24,
+                "right": 24,
+                "bottom": 24
               }
             },
             "border":
             {
-              "width": 2.0,
-              "cornerRadius": 8.0
+              "cornerRadius": 36
             },
             "appereance":
             {
               "backgroundColor": "#ffffffff"
             },
-            "content":
-            {
-              "text": "Hello world!",
-              "textAlignment": "right",
-              "fontStyle": "largeTitle"
-            },
-            "tapUrlAction": "open_screen/secondTab/firstScreen"
-          },
+            "elements": [
+              {
+                "type": "spacer",
+                "border":
+                {
+                  "cornerRadius": 8,
+                  "width": 1
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "appointmentsScreen",
+      "rootElement":
+      {
+        "type": "container",
+        "appereance":
+        {
+          "backgroundColor": "#ffffffff"
+        },
+        "layout":
+        {
+          "distribution": "fillEqually",
+          "paddings":
           {
-            "type": "button",
+            "top": 8,
+            "left": 16,
+            "right": 16,
+            "bottom": 8
+          },
+          "spacing": 10
+        },
+        "elements": [
+          {
+            "type": "label",
             "layout":
             {
-              "paddings":
-              {
-                "top": 16,
-                "left": 16,
-                "right": 16,
-                "bottom": 16
-              }
+              "height": 64
+            },
+            "border":
+            {
+              "cornerRadius": 8
+            },
+            "appereance":
+            {
+              "backgroundColor": "#bb8a52ff"
             },
             "content":
             {
-              "text": "Button",
-              "buttonConfiguration": "filled"
+              "text": "Йога",
+              "textAlignment": "center",
+              "fontStyle": "headline",
+              "fontSize": 22,
+              "fontColor": "#ffffffff"
+            }
+          },
+          {
+            "type": "label",
+            "layout":
+            {
+              "height": 64
             },
-            "tapUrlAction": "open_screen/secondTab/firstScreen"
+            "border":
+            {
+              "cornerRadius": 8
+            },
+            "appereance":
+            {
+              "backgroundColor": "#bb8a52ff"
+            },
+            "content":
+            {
+              "text": "Бокс",
+              "textAlignment": "center",
+              "fontStyle": "headline",
+              "fontSize": 22,
+              "fontColor": "#ffffffff"
+            }
+          },
+          {
+            "type": "label",
+            "layout":
+            {
+              "height": 64
+            },
+            "border":
+            {
+              "cornerRadius": 8
+            },
+            "appereance":
+            {
+              "backgroundColor": "#bb8a52ff"
+            },
+            "content":
+            {
+              "text": "Теннис",
+              "textAlignment": "center",
+              "fontStyle": "headline",
+              "fontSize": 22,
+              "fontColor": "#ffffffff"
+            }
+          },
+          {
+            "type": "label",
+            "layout":
+            {
+              "height": 64
+            },
+            "border":
+            {
+              "cornerRadius": 8
+            },
+            "appereance":
+            {
+              "backgroundColor": "#bb8a52ff"
+            },
+            "content":
+            {
+              "text": "Баскетбол",
+              "textAlignment": "center",
+              "fontStyle": "headline",
+              "fontSize": 22,
+              "fontColor": "#ffffffff"
+            }
+          },
+          {
+            "type": "label",
+            "layout":
+            {
+              "height": 64
+            },
+            "border":
+            {
+              "cornerRadius": 8
+            },
+            "appereance":
+            {
+              "backgroundColor": "#bb8a52ff"
+            },
+            "content":
+            {
+              "text": "Фитнес",
+              "textAlignment": "center",
+              "fontStyle": "headline",
+              "fontSize": 22,
+              "fontColor": "#ffffffff"
+            }
+          },
+          {
+            "type": "label",
+            "layout":
+            {
+              "height": 64
+            },
+            "border":
+            {
+              "cornerRadius": 8
+            },
+            "appereance":
+            {
+              "backgroundColor": "#bb8a52ff"
+            },
+            "content":
+            {
+              "text": "Растяжка",
+              "textAlignment": "center",
+              "fontStyle": "headline",
+              "fontSize": 22,
+              "fontColor": "#ffffffff"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "settingsScreen",
+      "rootElement":
+      {
+        "type": "container",
+        "appereance":
+        {
+          "backgroundColor": "#ffffffff"
+        },
+        "layout":
+        {
+          "paddings":
+          {
+            "top": 0,
+            "left": 24,
+            "right": 24,
+            "bottom": 24
+          },
+          "spacing": 8
+        },
+        "elements": [
+          {
+            "type": "label",
+            "content":
+            {
+              "text": "Настройки",
+              "textAlignment": "left",
+              "fontStyle": "headline",
+              "fontSize": 32,
+              "fontColor": "#0c3b2eff"
+            }
+          },
+          {
+            "type": "spacer",
+            "border":
+            {
+              "cornerRadius": 8,
+              "width": 1
+            }
+          },
+          {
+            "type": "label",
+            "layout":
+            {
+              "height": 42
+            },
+            "border":
+            {
+              "cornerRadius": 12
+            },
+            "appereance":
+            {
+              "backgroundColor": "#bb8a52ff"
+            },
+            "content":
+            {
+              "text": "Связаться с нами",
+              "textAlignment": "center",
+              "fontStyle": "headline",
+              "fontColor": "#ffffffff"
+            }
           }
         ]
       }
