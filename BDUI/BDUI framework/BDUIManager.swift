@@ -40,6 +40,7 @@ final public class BDUIManagerImpl: BDUIManager {
 	// MARK: Private methods
     private static func getConfiguration() -> BDUIConfiguration? {
         guard let path = Bundle.main.path(forResource: "configuration", ofType: "json") else {
+			NSLog("Cant get file")
             return nil
         }
 
@@ -47,7 +48,7 @@ final public class BDUIManagerImpl: BDUIManager {
             let configurationData = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
             return BDUIParser.parseUIConfiguration(jsonData: configurationData)
         } catch {
-            NSLog("Cant get file")
+            NSLog("Cant parse file")
             return nil
         }
     }
