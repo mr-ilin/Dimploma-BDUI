@@ -27,10 +27,6 @@ final class AppCoordinator: AppCoordinatorProtocol {
     }
 
     func start() {
-		let tabBarController = UITabBarController()
-		tabBarController.tabBar.tintColor = .tintColor
-		tabBarController.tabBar.isTranslucent = false
-
 		var viewControllers = [UIViewController]()
 		manager.screenController.tabsModels().forEach { tabModel in
 			let vc = UINavigationController()
@@ -52,6 +48,9 @@ final class AppCoordinator: AppCoordinatorProtocol {
 			coordinator.start()
 		}
 
+		let tabBarController = UITabBarController()
+		tabBarController.tabBar.isTranslucent = false
+		tabBarController.tabBar.tintColor = UIColor(hex: "#6d9773ff")
 		tabBarController.setViewControllers(viewControllers, animated: false)
 
         window.rootViewController = tabBarController
