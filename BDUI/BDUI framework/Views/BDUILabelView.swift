@@ -44,7 +44,15 @@ final class BDUILabelView: BDUIView {
         }
 
         if let textStyle = content?.fontStyle {
-            labelView.font = .preferredFont(forTextStyle: textStyle.uikitFont)
+			if let fontSize = content?.fontSize {
+				labelView.font = .preferredFont(forTextStyle: textStyle.uikitFont).withSize(CGFloat(fontSize))
+			} else {
+				labelView.font = .preferredFont(forTextStyle: textStyle.uikitFont)
+			}
         }
+
+		if let fontColor = content?.fontColor {
+			labelView.textColor = UIColor(hex: fontColor)
+		}
     }
 }
