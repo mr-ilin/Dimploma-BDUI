@@ -29,13 +29,7 @@ final class AppCoordinator: AppCoordinatorProtocol {
     func start() {
 		var viewControllers = [UIViewController]()
 		manager.screenController.tabsModels().forEach { tabModel in
-			let vc = UINavigationController()
-			vc.navigationItem.title = tabModel.title
-			vc.tabBarItem.title = tabModel.title
-			if let imageName = tabModel.image {
-				vc.tabBarItem.image = UIImage(systemName: imageName)
-			}
-
+			let vc = manager.screenController.renderNavigationController(for: tabModel)
 			let coordinator = BDUICoordinator(
 				screenController: manager.screenController,
 				navigationController: vc,
@@ -48,9 +42,7 @@ final class AppCoordinator: AppCoordinatorProtocol {
 			coordinator.start()
 		}
 
-		let tabBarController = UITabBarController()
-		tabBarController.tabBar.isTranslucent = false
-		tabBarController.tabBar.tintColor = UIColor(hex: "#6d9773ff")
+		let tabBarController = manager.screenController.renderTabBarController()
 		tabBarController.setViewControllers(viewControllers, animated: false)
 
         window.rootViewController = tabBarController

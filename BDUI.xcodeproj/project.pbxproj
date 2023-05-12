@@ -30,6 +30,10 @@
 		F6894DA329E70937006D7A0D /* BDUIComponentContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6894DA229E70937006D7A0D /* BDUIComponentContent.swift */; };
 		F6894DA529E7287F006D7A0D /* BDUISpacerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6894DA429E7287F006D7A0D /* BDUISpacerView.swift */; };
 		F699BB8C2A0D559C00F7D348 /* configuration_different_style.json in Resources */ = {isa = PBXBuildFile; fileRef = F699BB8B2A0D559C00F7D348 /* configuration_different_style.json */; };
+		F699BB8E2A0E2DFF00F7D348 /* BDUIScreenNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F699BB8D2A0E2DFF00F7D348 /* BDUIScreenNavigationItem.swift */; };
+		F699BB902A0E507400F7D348 /* configuration_new_layout.json in Resources */ = {isa = PBXBuildFile; fileRef = F699BB8F2A0E507300F7D348 /* configuration_new_layout.json */; };
+		F699BB922A0E522000F7D348 /* BDUITabBarAppearence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F699BB912A0E522000F7D348 /* BDUITabBarAppearence.swift */; };
+		F699BB942A0E546500F7D348 /* BDUINavigationBarAppearence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F699BB932A0E546500F7D348 /* BDUINavigationBarAppearence.swift */; };
 		F6D2331D29DF24B10077E16D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2331C29DF24B10077E16D /* AppDelegate.swift */; };
 		F6D2331F29DF24B10077E16D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2331E29DF24B10077E16D /* SceneDelegate.swift */; };
 		F6D2332629DF24B70077E16D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6D2332529DF24B70077E16D /* Assets.xcassets */; };
@@ -72,6 +76,10 @@
 		F6894DA229E70937006D7A0D /* BDUIComponentContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUIComponentContent.swift; sourceTree = "<group>"; };
 		F6894DA429E7287F006D7A0D /* BDUISpacerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUISpacerView.swift; sourceTree = "<group>"; };
 		F699BB8B2A0D559C00F7D348 /* configuration_different_style.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = configuration_different_style.json; sourceTree = "<group>"; };
+		F699BB8D2A0E2DFF00F7D348 /* BDUIScreenNavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUIScreenNavigationItem.swift; sourceTree = "<group>"; };
+		F699BB8F2A0E507300F7D348 /* configuration_new_layout.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = configuration_new_layout.json; sourceTree = "<group>"; };
+		F699BB912A0E522000F7D348 /* BDUITabBarAppearence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUITabBarAppearence.swift; sourceTree = "<group>"; };
+		F699BB932A0E546500F7D348 /* BDUINavigationBarAppearence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUINavigationBarAppearence.swift; sourceTree = "<group>"; };
 		F6D2331929DF24B10077E16D /* BDUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BDUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6D2331C29DF24B10077E16D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6D2331E29DF24B10077E16D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +154,7 @@
 				F6D2332529DF24B70077E16D /* Assets.xcassets */,
 				F6894D9129E703CA006D7A0D /* configuration.json */,
 				F699BB8B2A0D559C00F7D348 /* configuration_different_style.json */,
+				F699BB8F2A0E507300F7D348 /* configuration_new_layout.json */,
 				F62BF1B929E95868006F064B /* BDUIUniversal */,
 				F62BF1BA29E9587D006F064B /* App */,
 				F63A34E029E875F8001F0A6D /* Derived */,
@@ -178,6 +187,9 @@
 				F63A34D829E86CBF001F0A6D /* BDUIFontStyle.swift */,
 				F63A34DA29E86E2A001F0A6D /* BDUITextAlignment.swift */,
 				F65D31CB2A09889A00D8DB07 /* BDUIButtonConfiguration.swift */,
+				F699BB8D2A0E2DFF00F7D348 /* BDUIScreenNavigationItem.swift */,
+				F699BB912A0E522000F7D348 /* BDUITabBarAppearence.swift */,
+				F699BB932A0E546500F7D348 /* BDUINavigationBarAppearence.swift */,
 			);
 			path = "Component models";
 			sourceTree = "<group>";
@@ -310,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F699BB8C2A0D559C00F7D348 /* configuration_different_style.json in Resources */,
+				F699BB902A0E507400F7D348 /* configuration_new_layout.json in Resources */,
 				F6D2332929DF24B70077E16D /* LaunchScreen.storyboard in Resources */,
 				F6894D9229E703CA006D7A0D /* configuration.json in Resources */,
 				F6D2332629DF24B70077E16D /* Assets.xcassets in Resources */,
@@ -332,12 +345,15 @@
 				F6D37D8729E4923A009F0556 /* BDUIView.swift in Sources */,
 				F6894D9829E708A4006D7A0D /* BDUIDistributionType.swift in Sources */,
 				F6D2333E29DF32580077E16D /* BDUIConfiguration.swift in Sources */,
+				F699BB922A0E522000F7D348 /* BDUITabBarAppearence.swift in Sources */,
+				F699BB942A0E546500F7D348 /* BDUINavigationBarAppearence.swift in Sources */,
 				F6894DA129E70927006D7A0D /* BDUIAppereance.swift in Sources */,
 				F6D2334229DF35D70077E16D /* BDUIComponentModel.swift in Sources */,
 				F63A34D929E86CBF001F0A6D /* BDUIFontStyle.swift in Sources */,
 				F6894DA329E70937006D7A0D /* BDUIComponentContent.swift in Sources */,
 				F65D31D02A0AC6CA00D8DB07 /* BDUITab.swift in Sources */,
 				F6D2333429DF2A830077E16D /* AppCoordinator.swift in Sources */,
+				F699BB8E2A0E2DFF00F7D348 /* BDUIScreenNavigationItem.swift in Sources */,
 				F6894D9629E7088D006D7A0D /* BDUIAxisType.swift in Sources */,
 				F6D2333629DF2ACC0077E16D /* BaseCoordinator.swift in Sources */,
 				F65D31CC2A09889A00D8DB07 /* BDUIButtonConfiguration.swift in Sources */,

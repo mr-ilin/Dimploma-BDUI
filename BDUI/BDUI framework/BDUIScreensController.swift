@@ -16,6 +16,9 @@ public protocol BDUIScreensController: AnyObject {
 	func tabsModels() -> [BDUITab]
 	func render(by url: URL) -> UIViewController?
 	func canOpenScreen(for url: URL, from tabId: BDUITab.Id) -> Bool
+
+	func renderNavigationController(for tabModel: BDUITab) -> UINavigationController
+	func renderTabBarController() -> UITabBarController
 }
 
 // MARK: - BDUIScreensControllerImpl
@@ -79,6 +82,14 @@ extension BDUIScreensControllerImpl: BDUIScreensController {
 		}
 
 		return screensById[targetScreenId] != nil
+	}
+
+	public func renderNavigationController(for tabModel: BDUITab) -> UINavigationController {
+		viewFactory.createNavigationController(for: tabModel)
+	}
+
+	public func renderTabBarController() -> UITabBarController {
+		viewFactory.createTabBarController(for: configuration.tabBarAppereance)
 	}
 }
 

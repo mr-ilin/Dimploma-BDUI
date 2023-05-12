@@ -14,4 +14,5 @@ public struct BDUITab: Decodable {
 	public let rootScreenUrl: URL
 	public let title: String?
 	public let image: String?
+	public let navigationAppereance: BDUINavigationBarAppereance?
 }

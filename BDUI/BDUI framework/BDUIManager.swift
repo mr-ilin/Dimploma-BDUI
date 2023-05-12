@@ -37,9 +37,9 @@ final public class BDUIManagerImpl: BDUIManager {
 		viewFactory.delegate = screenController
     }
 
-	// MARK: Private methods
+	// MARK: Private methods	
     private static func getConfiguration() -> BDUIConfiguration? {
-        guard let path = Bundle.main.path(forResource: "configuration", ofType: "json") else {
+        guard let path = Bundle.main.path(forResource: "configuration_new_layout", ofType: "json") else {
 			NSLog("Cant get file")
             return nil
         }

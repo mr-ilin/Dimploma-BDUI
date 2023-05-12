@@ -8,7 +8,7 @@
 import Foundation
 
 public struct BDUIConfiguration: Decodable {
+	public let tabBarAppereance: BDUITabBarAppearence?
 	public let tabs: [BDUITab]
-    public let mainTabId: BDUITab.Id
     public let screens: [BDUIScreen]
 }
