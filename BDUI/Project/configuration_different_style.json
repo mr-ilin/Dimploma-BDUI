@@ -97,7 +97,7 @@
                 {
                   "text": "Записаться",
                   "textAlignment": "center",
-                  "fontStyle": "headline",
+                  "fontStyle": "headline"
                 },
                 "tapUrlAction": "open_screen/homeTab/appointmentsScreen"
               }
