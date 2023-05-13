@@ -16,7 +16,6 @@
       "image": "gearshape.fill"
     }
   ],
-  "mainTabId": "homeTab",
   "screens": [
     {
       "id": "homeScreen",
